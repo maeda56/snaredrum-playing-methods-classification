@@ -53,6 +53,6 @@ For a single percussion instrument, which tends to be seen as monotonous, we fou
 
 The result is that the accuracy of the deep, pre-trained model is lower. This is different from what is commonly known. It may be that a simple CNN is better suited for this task, or it may be that my code is inadequate. If you notice anything, please message me.
 
-## Referrence
+## Reference
 [YouTube channel 'Valerio Velardo - The Sound of AI's Playlist 'Pytorch for Audio + Music Processing'](https://youtube.com/playlist?list=PL-wATfeyAMNoirN4idjev6aRu8ISZYVWm)
 
