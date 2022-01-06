@@ -1,6 +1,6 @@
 # Snare drum playing methods classification by using CNN (SimpleCNN and PANNs ResNet38)
 ## Over View
-I used  3 CNN models to classify a single note on the snare drum into 4 techniques(Strike, Rim, Cross Stick and Buzz). In the case of Simple CNN, the accuracy is 79.1%.
+I used  3 CNN models to classify a single note on the snare drum into 4 techniques(Strike, Rim, Cross Stick and Buzz). In the case of 4-layer CNN, the accuracy is 79.1%.
 
 ## Requirement
 Python 3.8.3
@@ -11,7 +11,7 @@ Pytorch 1.9.1
 [Percussion Dataset](http://www.mattprockup.com/percussion-dataset)
 
 ## Model
-[Simple CNN](https://github.com/musikalkemist/pytorchforaudio)
+[4-layer CNN](https://github.com/musikalkemist/pytorchforaudio)
 
 [ResNet38 (pretrained or not)](https://github.com/qiuqiangkong/audioset_tagging_cnn)
 
@@ -32,7 +32,7 @@ PANNsResNet38_fineturing
 -model
   └-ResNet38_mAP=0.434.pth
 ~~~
-If you want to use Simple CNN, run `simpleCNN/train4snare.py`, if you want to use ResNet38, run `PANNsResNet38_finetuning/train.py` with the python command.
+If you want to use 4-layer CNN, run `simpleCNN/train4snare.py`, if you want to use ResNet38, run `PANNsResNet38_finetuning/train.py` with the python command.
 
 You can choose whether or not to pre-train ResNet38 by commenting out line 142 of `PANNsResNet38_finetuning/train4snare.py`.
 ~~~
@@ -46,7 +46,7 @@ You can choose whether or not to pre-train ResNet38 by commenting out line 142 o
 ---|---|---
 |ResNet38 (pretrained)|30|44.0%|
 |ResNet38 (not pretrained)|30|64.8%|
-|simpleCNN|10|79.1%|
+|4-layer CNN|10|79.1%|
 
 ## Discussion
 For a single percussion instrument, which tends to be seen as monotonous, we found that we could detect the differences between the four playing methods with about 80% accuracy.
