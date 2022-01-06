@@ -17,7 +17,8 @@ Pytorch 1.9.1
 
 ## Run
 Please download the Percusion Dataset and the ResNet38 pretrained model(ResNet38_mAP=0.434.pth) and the downloaded data looks like:
-'''-PANNsResNet38_fineturing
+~~~
+PANNsResNet38_fineturing
 -simpleCNN
 -data
   └-MDLib2.2
@@ -27,7 +28,8 @@ Please download the Percusion Dataset and the ResNet38 pretrained model(ResNet38
         | └-...
         |...
 -model
-  └-ResNet38_mAP=0.434.pth'''
+  └-ResNet38_mAP=0.434.pth
+~~~
 If you want to use Simple CNN, run 'simpleCNN/train4snare.py', if you want to use ResNet38, run 'snaredrum-playing-methods-classification/snaredrum-playing-methods-classification/PANNsResNet38_finetuning/train.py' with the python command.
 You can choose whether or not to pre-train ResNet38 by commenting out line 142 of 'snaredrum-playing-methods-classification/PANNsResNet38_finetuning/train4snare.py'.
 '''141:  
