@@ -13,7 +13,7 @@ Pytorch 1.9.1
 ## Model
 [4-layer CNN](https://github.com/musikalkemist/pytorchforaudio)
 
-[ResNet38 (pretrained or not)](https://github.com/qiuqiangkong/audioset_tagging_cnn)
+[PANNs ResNet38 (pretrained or not)](https://github.com/qiuqiangkong/audioset_tagging_cnn)
 
 ## Run
 Please clone this repo and download the [Percusion Dataset](http://www.mattprockup.com/percussion-dataset) and the ResNet38 pretrained model([ResNet38_mAP=0.434.pth](https://zenodo.org/record/3987831#.YdbVTRPP23I)).
