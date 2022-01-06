@@ -20,7 +20,7 @@ Please clone this repo and download the [Percusion Dataset](http://www.mattprock
 
 The downloaded data looks like:
 ~~~
-PANNsResNet38_fineturing
+-PANNsResNet38_fineturing
 -simpleCNN
 -data
   └-MDLib2.2
