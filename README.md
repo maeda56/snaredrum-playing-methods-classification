@@ -16,7 +16,7 @@ Pytorch 1.9.1
 [ResNet38 (pretrained or not)](https://github.com/qiuqiangkong/audioset_tagging_cnn)
 
 ## Run
-Please download the Percusion Dataset and the ResNet38 pretrained model(ResNet38_mAP=0.434.pth) and the downloaded data looks like:
+Please clone this repo and download the Percusion Dataset and the ResNet38 pretrained model(ResNet38_mAP=0.434.pth) and the downloaded data looks like:
 ~~~
 PANNsResNet38_fineturing
 -simpleCNN
@@ -30,9 +30,11 @@ PANNsResNet38_fineturing
 -model
   └-ResNet38_mAP=0.434.pth
 ~~~
-If you want to use Simple CNN, run 'simpleCNN/train4snare.py', if you want to use ResNet38, run 'snaredrum-playing-methods-classification/snaredrum-playing-methods-classification/PANNsResNet38_finetuning/train.py' with the python command.
-You can choose whether or not to pre-train ResNet38 by commenting out line 142 of 'snaredrum-playing-methods-classification/PANNsResNet38_finetuning/train4snare.py'.
-'''141:  
+If you want to use Simple CNN, run ~simpleCNN/train4snare.py~, if you want to use ResNet38, run ~snaredrum-playing-methods-classification/snaredrum-playing-methods-classification/PANNsResNet38_finetuning/train.py~ with the python command.
+You can choose whether or not to pre-train ResNet38 by commenting out line 142 of ~snaredrum-playing-methods-classification/PANNsResNet38_finetuning/train4snare.py~.
+~~~
+141:  
 142:    PRETRAINED_CHECKPOINT_PATH = '../data/model/ResNet38_mAP=0.434.pth' #If you want to train without pretraining, comment out this line
-143:    model.load_from_pretrain(PRETRAINED_CHECKPOINT_PATH)'''
+143:    model.load_from_pretrain(PRETRAINED_CHECKPOINT_PATH)
+~~~
 
