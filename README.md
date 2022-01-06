@@ -1,26 +1,28 @@
 # Snare drum playing methods classification by using CNN (SimpleCNN and PANNs ResNet38)
-##Over View
+## Over View
 I used  3 CNN models to classify a single note on the snare drum into four techniques(Strike, Rim, Cross Stick and Buzz). In the case of Simple CNN, the accuracy is 79.1%.
 
-##Requirement
+## Requirement
 Python 3.8.3
+
 Pytorch 1.9.1
 
-##Data
+## Data
 [Percussion Dataset](http://www.mattprockup.com/percussion-dataset)
 
-##Model
+## Model
 [Simple CNN](https://github.com/musikalkemist/pytorchforaudio)
+
 [ResNet38 (pretrained or not)](https://github.com/qiuqiangkong/audioset_tagging_cnn)
 
-##Run
+## Run
 Please download the Percusion Dataset and the ResNet38 pretrained model(ResNet38_mAP=0.434.pth) and the downloaded data looks like:
 '''
 -PANNsResNet38_fineturing
 -simpleCNN
 -data
   └-MDLib2.2
-     |-__MACOSX
+     |-_MACOSX
      └-MDLib2.2
         |-Sorted
         | └-...
