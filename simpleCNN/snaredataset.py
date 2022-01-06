@@ -16,11 +16,13 @@ class SnareDataset(Dataset):
 
     def __init__(self,
                  audio_path,
+                 transformation,
                  target_sample_rate,
                  num_samples,
                  device):
         self.audio_path = audio_path
         self.device = device
+        self.transformation = transformation.to(self.device)
         self.target_sample_rate = target_sample_rate
         self.num_samples = num_samples
 
@@ -35,8 +37,8 @@ class SnareDataset(Dataset):
         signal = self._mix_down_if_necessary(signal)
         signal = self._cut_if_necessary(signal)
         signal = self._right_pad_if_necessary(signal)
-        signal = torch.squeeze(signal)
-        signal = signal.to(self.device)
+        signal = signal.to(self.device)   # この下でも上でもうまくいかない。ここで。
+        signal = self.transformation(signal)
         return signal, label
 
     def _cut_if_necessary(self, signal):
@@ -70,7 +72,8 @@ class SnareDataset(Dataset):
         return label_index
 
 
-def get_datapath_list(rootpath):
+def get_datapath_list():
+    rootpath = "../../data/MDLib2.2/MDLib2.2/Sorted/Snare"
     target_path = os.path.join(rootpath+'/**/*.wav')
 
     path_list = []
@@ -78,12 +81,16 @@ def get_datapath_list(rootpath):
     for path in glob.glob(target_path):
         path_list.append(path)
 
-    return path_list   
+    print(f"path_list length : {len(path_list)}")
+    return path_list
+
+
+    
+
 
 
 if __name__ == "__main__":
-    rootpath = "../data/MDLib2.2/MDLib2.2/Sorted/Snare"
-    audio_path = get_datapath_list(rootpath)
+    audio_path = get_datapath_list()
     SAMPLE_RATE = 22050
     NUM_SAMPLES = 22050
 
@@ -91,7 +98,7 @@ if __name__ == "__main__":
         device = "cuda"
     else:
         device = "cpu"
-    print(f"device:{device}")
+    print(f"Using device {device}")
 
     mel_spectrogram = torchaudio.transforms.MelSpectrogram(
         sample_rate=SAMPLE_RATE,
@@ -101,9 +108,9 @@ if __name__ == "__main__":
     )
 
     sd = SnareDataset(audio_path,
+                            mel_spectrogram,
                             SAMPLE_RATE,
                             NUM_SAMPLES,
                             device)
-    dataset_length = len(sd)
+    print(f"There are {len(sd)} samples in the dataset.")
     signal, label = sd[1000]
-    print(1)
