@@ -139,7 +139,7 @@ if __name__ == "__main__":
                     CLASS_DIM,
                     FREEZE_BASE)
 
-    PRETRAINED_CHECKPOINT_PATH = '../data/model/ResNet38_mAP=0.434.pth'
+    PRETRAINED_CHECKPOINT_PATH = '../data/model/ResNet38_mAP=0.434.pth' #If you want to train without pretraining, comment out this line
     model.load_from_pretrain(PRETRAINED_CHECKPOINT_PATH)
     model = torch.nn.DataParallel(model)
     model.to(device)
