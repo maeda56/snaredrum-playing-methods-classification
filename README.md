@@ -1,5 +1,5 @@
 # Snare drum playing methods classification by using CNN (4-layer CNN and PANNs ResNet38)
-## Over View
+## Overview
 I used  3 CNN models to classify a single note on the snare drum into 4 techniques(Strike, Rim, Cross Stick and Buzz). In the case of 4-layer CNN, the accuracy is 79.1%.
 
 ## Requirement
