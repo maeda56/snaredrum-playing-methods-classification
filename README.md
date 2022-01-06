@@ -48,11 +48,11 @@ You can choose whether or not to pre-train ResNet38 by commenting out line 142 o
 |ResNet38 (not pretrained)|30|64.8%|
 |simpleCNN|10|79.1%|
 
-# Discussion
+## Discussion
 For a single percussion instrument, which tends to be seen as monotonous, we found that we could detect the differences between the four playing methods with about 80% accuracy.
 
 The result is that the accuracy of the deep, pre-trained model is lower. This is different from what is commonly known. It may be that a simple CNN is better suited for this task, or it may be that my code is inadequate. If you notice anything, please message me.
 
-# Referrence
+## Referrence
 [YouTube channel 'Valerio Velardo - The Sound of AI's Playlist 'Pytorch for Audio + Music Processing'](https://youtube.com/playlist?list=PL-wATfeyAMNoirN4idjev6aRu8ISZYVWm)
 
