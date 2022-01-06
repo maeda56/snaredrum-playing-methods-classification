@@ -34,11 +34,11 @@ The downloaded data looks like:
 ~~~
 If you want to use 4-layer CNN, run `simpleCNN/train4snare.py`, if you want to use ResNet38, run `PANNsResNet38_finetuning/train.py` with the python command.
 
-You can choose whether or not to pre-train ResNet38 by commenting out line 142 of `PANNsResNet38_finetuning/train4snare.py`.
-~~~
-141:  
-142:    PRETRAINED_CHECKPOINT_PATH = '../data/model/ResNet38_mAP=0.434.pth' #If you want to train without pretraining, comment out this line
-143:    model.load_from_pretrain(PRETRAINED_CHECKPOINT_PATH)
+You can choose whether or not to pre-train ResNet38 by commenting out line 143 of `PANNsResNet38_finetuning/train4snare.py`.
+~~~ 
+142:    PRETRAINED_CHECKPOINT_PATH = '../data/model/ResNet38_mAP=0.434.pth'
+143:    model.load_from_pretrain(PRETRAINED_CHECKPOINT_PATH)  #If you want to train without pretraining, comment out this line
+144:    model = torch.nn.DataParallel(model)
 ~~~
 
 ## Result
