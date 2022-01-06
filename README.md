@@ -16,7 +16,7 @@ Pytorch 1.9.1
 [ResNet38 (pretrained or not)](https://github.com/qiuqiangkong/audioset_tagging_cnn)
 
 ## Run
-Please clone this repo and download the Percusion Dataset and the ResNet38 pretrained model(ResNet38_mAP=0.434.pth) from https://zenodo.org/record/3987831#.YdbVTRPP23I
+Please clone this repo and download the [Percusion Dataset](http://www.mattprockup.com/percussion-dataset) and the ResNet38 pretrained model([ResNet38_mAP=0.434.pth](https://zenodo.org/record/3987831#.YdbVTRPP23I)).
 
 The downloaded data looks like:
 ~~~
