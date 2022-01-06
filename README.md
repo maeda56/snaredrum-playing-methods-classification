@@ -1,6 +1,6 @@
 # Snare drum playing methods classification by using CNN (SimpleCNN and PANNs ResNet38)
 ## Over View
-I used  3 CNN models to classify a single note on the snare drum into four techniques(Strike, Rim, Cross Stick and Buzz). In the case of Simple CNN, the accuracy is 79.1%.
+I used  3 CNN models to classify a single note on the snare drum into 4 techniques(Strike, Rim, Cross Stick and Buzz). In the case of Simple CNN, the accuracy is 79.1%.
 
 ## Requirement
 Python 3.8.3
@@ -17,8 +17,7 @@ Pytorch 1.9.1
 
 ## Run
 Please download the Percusion Dataset and the ResNet38 pretrained model(ResNet38_mAP=0.434.pth) and the downloaded data looks like:
-'''
--PANNsResNet38_fineturing
+'''-PANNsResNet38_fineturing
 -simpleCNN
 -data
   └-MDLib2.2
@@ -28,13 +27,10 @@ Please download the Percusion Dataset and the ResNet38 pretrained model(ResNet38
         | └-...
         |...
 -model
-  └-ResNet38_mAP=0.434.pth
-'''
+  └-ResNet38_mAP=0.434.pth'''
 If you want to use Simple CNN, run 'simpleCNN/train4snare.py', if you want to use ResNet38, run 'snaredrum-playing-methods-classification/snaredrum-playing-methods-classification/PANNsResNet38_finetuning/train.py' with the python command.
 You can choose whether or not to pre-train ResNet38 by commenting out line 142 of 'snaredrum-playing-methods-classification/PANNsResNet38_finetuning/train4snare.py'.
-'''
-141:  
+'''141:  
 142:    PRETRAINED_CHECKPOINT_PATH = '../data/model/ResNet38_mAP=0.434.pth' #If you want to train without pretraining, comment out this line
-143:    model.load_from_pretrain(PRETRAINED_CHECKPOINT_PATH)
-'''
+143:    model.load_from_pretrain(PRETRAINED_CHECKPOINT_PATH)'''
 
