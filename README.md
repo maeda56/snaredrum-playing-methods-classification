@@ -54,5 +54,5 @@ For a single percussion instrument, which tends to be seen as monotonous, DNN co
 The result is that the accuracy of the deep model is lower. This is different from what is commonly known. It may be that a simple CNN is better suited for this task, or it may be that my code is inadequate. If you notice anything, please message me.
 
 ## Reference
-[YouTube channel "Valerio Velardo - The Sound of AI" - Playlist "Pytorch for Audio + Music Processing"](https://youtube.com/playlist?list=PL-wATfeyAMNoirN4idjev6aRu8ISZYVWm)
-[PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition](https://github.com/qiuqiangkong/audioset_tagging_cnn)
+- [YouTube channel "Valerio Velardo - The Sound of AI" - Playlist "Pytorch for Audio + Music Processing"](https://youtube.com/playlist?list=PL-wATfeyAMNoirN4idjev6aRu8ISZYVWm)
+- [PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition](https://github.com/qiuqiangkong/audioset_tagging_cnn)
