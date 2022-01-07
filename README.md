@@ -32,7 +32,7 @@ The downloaded data looks like:
 -model
   └-ResNet38_mAP=0.434.pth
 ~~~
-If you want to use 4-layer CNN, run `simpleCNN/train4snare.py`, if you want to use ResNet38, run `PANNsResNet38_finetuning/train.py` with the python command.
+If you want to use 4-layer CNN, run `simpleCNN/train.py`, if you want to use ResNet38, run `PANNsResNet38_finetuning/train4snare.py` with the python command.
 
 You can choose whether or not to pre-train ResNet38 by commenting out line 143 of `PANNsResNet38_finetuning/train4snare.py`.
 ~~~ 
